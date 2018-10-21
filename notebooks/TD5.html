@@ -1,0 +1,2882 @@
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="TD-5">TD 5<a class="anchor-link" href="#TD-5">&#182;</a></h1><h2 id="Exo-7.7">Exo 7.7<a class="anchor-link" href="#Exo-7.7">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span><span class="o">.&lt;</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">QQ</span><span class="p">[]</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">ideal</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()</span>
+<span class="n">G</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[x^2 - x, x*y - x, y^2 - x]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">I</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;lex&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[x - y^2, y^3 - y^2]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">I</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;deglex&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[x^2 - x, x*y - x, y^2 - x]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">I</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;invlex&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[y^2 - x, x*y - x, x^2 - x]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On peut essayer des ordres plus compliqués</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">TermOrder</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Help on class TermOrder in module sage.rings.polynomial.term_order:
+
+class TermOrder(sage.structure.sage_object.SageObject)
+ |  A term order.
+ |  
+ |  See ``sage.rings.polynomial.term_order`` for details on supported
+ |  term orders.
+ |  
+ |  Method resolution order:
+ |      TermOrder
+ |      sage.structure.sage_object.SageObject
+ |      builtins.object
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(self, other)
+ |      Construct a block order combining self and other.
+ |      
+ |      INPUT:
+ |      
+ |      - ``other`` - a term order
+ |      
+ |      OUTPUT: a block order
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: from sage.rings.polynomial.term_order import TermOrder
+ |          sage: TermOrder(&#39;deglex&#39;,2) + TermOrder(&#39;degrevlex(3),neglex(3)&#39;)
+ |          Block term order with blocks:
+ |          (Degree lexicographic term order of length 2,
+ |           Degree reverse lexicographic term order of length 3,
+ |           Negative lexicographic term order of length 3)
+ |  
+ |  __eq__(self, other)
+ |      Return true if self and other are equal.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: TermOrder(&#39;lex&#39;) == TermOrder(&#39;lex&#39;,3)
+ |          True
+ |      
+ |      ::
+ |      
+ |          sage: TermOrder(&#39;degrevlex&#39;) == TermOrder(&#39;lex&#39;)
+ |          False
+ |      
+ |      ::
+ |      
+ |          sage: T1 = TermOrder(&#39;lex&#39;,2)+TermOrder(&#39;lex&#39;,3)
+ |          sage: T2 = TermOrder(&#39;lex&#39;,3)+TermOrder(&#39;lex&#39;,2)
+ |          sage: T1 == T2
+ |          True
+ |      
+ |      ::
+ |      
+ |          sage: T1 = TermOrder(&#39;lex&#39;,2)+TermOrder(&#39;neglex&#39;,3)
+ |          sage: T2 = TermOrder(&#39;lex&#39;,2)+TermOrder(&#39;neglex&#39;,3)
+ |          sage: T1 == T2
+ |          True
+ |  
+ |  __getattr__(self, name)
+ |      Return the correct ``compare_tuples/greater_tuple/sortkey function``.
+ |      
+ |      Note that the ``compare_tuples`` methods have been deprecated in
+ |      :trac:`21766`.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: TermOrder(&#39;lex&#39;).compare_tuples
+ |          &lt;bound method TermOrder.compare_tuples_lex of Lexicographic term order&gt;
+ |          sage: TermOrder(&#39;lex&#39;).sortkey
+ |          &lt;bound method TermOrder.sortkey_lex of Lexicographic term order&gt;
+ |          sage: TermOrder(&#39;deglex&#39;).compare_tuples
+ |          &lt;bound method TermOrder.compare_tuples_deglex of Degree lexicographic term order&gt;
+ |  
+ |  __getitem__(self, i)
+ |      Return the i-th block of this term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``i`` - index
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: T = TermOrder(&#39;lex&#39;)
+ |          sage: T[0]
+ |          Lexicographic term order
+ |      
+ |      ::
+ |      
+ |          sage: T = TermOrder(&#39;lex&#39;, 2) + TermOrder(&#39;degrevlex&#39;, 3)
+ |          sage: T[1]
+ |          Degree reverse lexicographic term order
+ |      
+ |      Note that ``len(self)`` does not count blocks but
+ |      variables.
+ |      
+ |      ::
+ |      
+ |          sage: T = TermOrder(&#39;lex&#39;, 2) + TermOrder(&#39;degrevlex&#39;, 3)
+ |          sage: T[len(T)-1]
+ |          Traceback (most recent call last):
+ |          \dots
+ |          IndexError: tuple index out of range
+ |  
+ |  __hash__(self)
+ |      A hash function
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: _=hash(TermOrder(&#39;lex&#39;))
+ |  
+ |  __init__(self, name=&#39;lex&#39;, n=0, force=False)
+ |      Construct a new term order object.
+ |      
+ |      INPUT:
+ |      
+ |      - ``name`` - name of the term order (default: lex)
+ |      
+ |      - ``n`` - number of variables (default is `0`) weights for
+ |        weighted degree orders. The weights are converted to
+ |        integers and must be positive.
+ |      
+ |      - ``force`` - ignore unknown term orders.
+ |      
+ |      See the ``sage.rings.polynomial.term_order`` module
+ |      for help which names and orders are available.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: t = TermOrder(&#39;lex&#39;)
+ |          sage: t
+ |          Lexicographic term order
+ |          sage: loads(dumps(t)) == t
+ |          True
+ |      
+ |      We can construct block orders directly as::
+ |      
+ |          sage: TermOrder(&#39;degrevlex(3),neglex(2)&#39;)
+ |          Block term order with blocks:
+ |          (Degree reverse lexicographic term order of length 3,
+ |           Negative lexicographic term order of length 2)
+ |      
+ |      or by adding together the blocks::
+ |      
+ |          sage: t1 = TermOrder(&#39;degrevlex&#39;,3)
+ |          sage: t2 = TermOrder(&#39;neglex&#39;,2)
+ |          sage: t1 + t2
+ |          Block term order with blocks:
+ |          (Degree reverse lexicographic term order of length 3,
+ |           Negative lexicographic term order of length 2)
+ |          sage: t3 = TermOrder(&#39;wdeglex&#39;,(1,2))
+ |          sage: t1 + t3
+ |          Block term order with blocks:
+ |          (Degree reverse lexicographic term order of length 3,
+ |           Weighted degree lexicographic term order with weights (1, 2))
+ |          sage: t4 = TermOrder(&#39;degneglex&#39;)
+ |          sage: t4
+ |          Degree negative lexicographic term order
+ |      
+ |      We allow blocks of length 0, these are simply ignored::
+ |      
+ |          sage: TermOrder(&#39;lex(0),degrevlex(5),deglex(0),deglex(2)&#39;)
+ |          Block term order with blocks:
+ |          (Degree reverse lexicographic term order of length 5,
+ |           Degree lexicographic term order of length 2)
+ |      
+ |      .. note::
+ |      
+ |         The optional `n` parameter is not necessary if only
+ |         non-block orders like `deglex` are
+ |         constructed. However, it is useful if block orders are
+ |         to be constructed from this ``TermOrder`` object later.
+ |      
+ |      TESTS:
+ |      
+ |      We demonstrate that non-positive weights are refused and non-integral weights
+ |      are converted to integers (and potentially rounded)::
+ |      
+ |          sage: N.&lt;a,b,c&gt; = PolynomialRing(QQ, 3, order=TermOrder(&#39;wdeglex&#39;,[-1,2,-3]))
+ |          Traceback (most recent call last):
+ |          ...
+ |          ValueError: the degree weights must be positive integers
+ |          sage: N.&lt;a,b,c&gt; = PolynomialRing(QQ, 3, order=TermOrder(&#39;wdeglex&#39;,[1.1,2,3]))
+ |          sage: a.degree()
+ |          1
+ |      
+ |      We enforce consistency when calling the copy constructor (cf.
+ |      :trac:`12748`)::
+ |      
+ |          sage: T = TermOrder(&#39;degrevlex&#39;, 6) + TermOrder(&#39;degrevlex&#39;,10)
+ |          sage: R.&lt;x0,y0,z0,x1,y1,z1,a0,a1,a2,a3,a4,a5,a6,a7,a8&gt; = PolynomialRing(QQ,order=T)
+ |          Traceback (most recent call last):
+ |          ...
+ |          ValueError: the length of the given term order (16) differs from the number of variables (15)
+ |  
+ |  __iter__(self)
+ |      Iterate over the blocks of this term order.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: T = TermOrder(&#39;lex&#39;)
+ |          sage: list(T) # indirect doctest
+ |          [Lexicographic term order]
+ |      
+ |      ::
+ |      
+ |          sage: T = TermOrder(&#39;lex&#39;, 2) + TermOrder(&#39;degrevlex&#39;, 3)
+ |          sage: list(T)
+ |          [Lexicographic term order, Degree reverse lexicographic term order]
+ |      
+ |      Note that ``len(self)`` and
+ |      ``len(list(self))`` are not the same. The former counts
+ |      the number of variables in ``self`` while the latter
+ |      counts the number of blocks.
+ |  
+ |  __len__(self)
+ |      Return the length of this term order, i.e. the number of
+ |      variables it covers. This may be zero for indefinitely many
+ |      variables.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: T = TermOrder(&#39;lex&#39;)
+ |          sage: len(T)
+ |          0
+ |          sage: T = TermOrder(&#39;lex&#39;, 2) + TermOrder(&#39;degrevlex&#39;, 3)
+ |          sage: len(T)
+ |          5
+ |  
+ |  __ne__(self, other)
+ |      Return true if self and other are not equal.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: T1 = TermOrder(&#39;lex&#39;,2)+TermOrder(&#39;lex&#39;,3)
+ |          sage: T2 = TermOrder(&#39;lex&#39;,3)+TermOrder(&#39;lex&#39;,2)
+ |          sage: T1 != T2
+ |          False
+ |  
+ |  __setstate__(self, dict)
+ |      Translate old pickled TermOrder objects.
+ |      
+ |      See Trac :trac:`11316`.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: t = TermOrder(&#39;lex&#39;)
+ |          sage: t2 = loads(dumps(t))
+ |          sage: t2._weights is None
+ |          True
+ |  
+ |  blocks(self)
+ |      Return the term order blocks of self.
+ |      
+ |      NOTE:
+ |      
+ |      This method has been added in :trac:`11316`. There used
+ |      to be an *attribute* of the same name and the same content.
+ |      So, it is a backward incompatible syntax change.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: t=TermOrder(&#39;deglex&#39;,2)+TermOrder(&#39;lex&#39;,2)
+ |          sage: t.blocks()
+ |          (Degree lexicographic term order, Lexicographic term order)
+ |  
+ |  compare_tuples_block(self, f, g)
+ |      DEPRECATED in :trac:`21766`
+ |  
+ |  compare_tuples_deglex(self, f, g)
+ |      DEPRECATED in :trac:`21766`
+ |  
+ |  compare_tuples_degneglex(self, f, g)
+ |      DEPRECATED in :trac:`21766`
+ |  
+ |  compare_tuples_degrevlex(self, f, g)
+ |      DEPRECATED in :trac:`21766`
+ |  
+ |  compare_tuples_invlex(self, f, g)
+ |      DEPRECATED in :trac:`21766`
+ |  
+ |  compare_tuples_lex(self, f, g)
+ |      DEPRECATED in :trac:`21766`
+ |  
+ |  compare_tuples_matrix(self, f, g)
+ |      DEPRECATED in :trac:`21766`
+ |  
+ |  compare_tuples_negdeglex(self, f, g)
+ |      DEPRECATED in :trac:`21766`
+ |  
+ |  compare_tuples_negdegrevlex(self, f, g)
+ |      DEPRECATED in :trac:`21766`
+ |  
+ |  compare_tuples_neglex(self, f, g)
+ |      DEPRECATED in :trac:`21766`
+ |  
+ |  compare_tuples_negwdeglex(self, f, g)
+ |      DEPRECATED in :trac:`21766`
+ |  
+ |  compare_tuples_negwdegrevlex(self, f, g)
+ |      DEPRECATED in :trac:`21766`
+ |  
+ |  compare_tuples_wdeglex(self, f, g)
+ |      DEPRECATED in :trac:`21766`
+ |  
+ |  compare_tuples_wdegrevlex(self, f, g)
+ |      DEPRECATED in :trac:`21766`
+ |  
+ |  greater_tuple_block(self, f, g)
+ |      Return the greater exponent tuple with respect to the block
+ |      order as specified when constructing this element.
+ |      
+ |      This method is called by the lm/lc/lt methods of
+ |      ``MPolynomial_polydict``.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` - exponent tuple
+ |      
+ |      - ``g`` - exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;a,b,c,d,e,f&gt;=PolynomialRing(QQbar, 6, order=&#39;degrevlex(3),degrevlex(3)&#39;)
+ |          sage: f = a + c^4; f.lm() # indirect doctest
+ |          c^4
+ |          sage: g = a + e^4; g.lm()
+ |          a
+ |  
+ |  greater_tuple_deglex(self, f, g)
+ |      Return the greater exponent tuple with respect to the total degree
+ |      lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` - exponent tuple
+ |      
+ |      - ``g`` - exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y,z&gt; = PolynomialRing(QQbar, 3, order=&#39;deglex&#39;)
+ |          sage: f = x + y; f.lm() # indirect doctest
+ |          x
+ |          sage: f = x + y^2*z; f.lm()
+ |          y^2*z
+ |      
+ |      This method is called by the lm/lc/lt methods of
+ |      ``MPolynomial_polydict``.
+ |  
+ |  greater_tuple_degneglex(self, f, g)
+ |      Return the greater exponent tuple with respect to the degree negative
+ |      lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` - exponent tuple
+ |      
+ |      - ``g`` - exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y,z&gt; = PolynomialRing(QQbar, 3, order=&#39;degneglex&#39;)
+ |          sage: f = x + y; f.lm() # indirect doctest
+ |          y
+ |          sage: f = x + y^2*z; f.lm()
+ |          y^2*z
+ |      
+ |      This method is called by the lm/lc/lt methods of
+ |      ``MPolynomial_polydict``.
+ |  
+ |  greater_tuple_degrevlex(self, f, g)
+ |      Return the greater exponent tuple with respect to the total degree
+ |      reversed lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` - exponent tuple
+ |      
+ |      - ``g`` - exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y,z&gt; = PolynomialRing(QQbar, 3, order=&#39;degrevlex&#39;)
+ |          sage: f = x + y; f.lm() # indirect doctest
+ |          x
+ |          sage: f = x + y^2*z; f.lm()
+ |          y^2*z
+ |      
+ |      This method is called by the lm/lc/lt methods of
+ |      ``MPolynomial_polydict``.
+ |  
+ |  greater_tuple_invlex(self, f, g)
+ |      Return the greater exponent tuple with respect to the inversed
+ |      lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` - exponent tuple
+ |      
+ |      - ``g`` - exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y,z&gt; = PolynomialRing(QQbar, 3, order=&#39;invlex&#39;)
+ |          sage: f = x + y; f.lm() # indirect doctest
+ |          y
+ |          sage: f = y + x^2; f.lm()
+ |          y
+ |      
+ |      This method is called by the lm/lc/lt methods of
+ |      ``MPolynomial_polydict``.
+ |  
+ |  greater_tuple_lex(self, f, g)
+ |      Return the greater exponent tuple with respect to the
+ |      lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` - exponent tuple
+ |      
+ |      - ``g`` - exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y,z&gt; = PolynomialRing(QQbar, 3, order=&#39;lex&#39;)
+ |          sage: f = x + y^2; f.lm() # indirect doctest
+ |          x
+ |      
+ |      This method is called by the lm/lc/lt methods of
+ |      ``MPolynomial_polydict``.
+ |  
+ |  greater_tuple_matrix(self, f, g)
+ |      Return the greater exponent tuple with respect to the matrix
+ |      term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` - exponent tuple
+ |      
+ |      - ``g`` - exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y&gt; = PolynomialRing(QQbar, 2, order=&#39;m(1,3,1,0)&#39;)
+ |          sage: y &gt; x^2 # indirect doctest
+ |          True
+ |          sage: y &gt; x^3
+ |          False
+ |  
+ |  greater_tuple_negdeglex(self, f, g)
+ |      Return the greater exponent tuple with respect to the negative
+ |      degree lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` - exponent tuple
+ |      
+ |      - ``g`` - exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y,z&gt; = PolynomialRing(QQbar, 3, order=&#39;negdeglex&#39;)
+ |          sage: f = x + y; f.lm() # indirect doctest
+ |          x
+ |          sage: f = x + x^2; f.lm()
+ |          x
+ |          sage: f = x^2*y*z^2 + x*y^3*z; f.lm()
+ |          x^2*y*z^2
+ |      
+ |      This method is called by the lm/lc/lt methods of
+ |      ``MPolynomial_polydict``.
+ |  
+ |  greater_tuple_negdegrevlex(self, f, g)
+ |      Return the greater exponent tuple with respect to the negative
+ |      degree reverse lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` - exponent tuple
+ |      
+ |      - ``g`` - exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y,z&gt; = PolynomialRing(QQbar, 3, order=&#39;negdegrevlex&#39;)
+ |          sage: f = x + y; f.lm() # indirect doctest
+ |          x
+ |          sage: f = x + x^2; f.lm()
+ |          x
+ |          sage: f = x^2*y*z^2 + x*y^3*z; f.lm()
+ |          x*y^3*z
+ |      
+ |      This method is called by the lm/lc/lt methods of
+ |      ``MPolynomial_polydict``.
+ |  
+ |  greater_tuple_neglex(self, f, g)
+ |      Return the greater exponent tuple with respect to the negative
+ |      lexicographical term order.
+ |      
+ |      This method is called by the lm/lc/lt methods of
+ |      ``MPolynomial_polydict``.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` - exponent tuple
+ |      
+ |      - ``g`` - exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;a,b,c,d,e,f&gt;=PolynomialRing(QQbar, 6, order=&#39;degrevlex(3),degrevlex(3)&#39;)
+ |          sage: f = a + c^4; f.lm() # indirect doctest
+ |          c^4
+ |          sage: g = a + e^4; g.lm()
+ |          a
+ |  
+ |  greater_tuple_negwdeglex(self, f, g)
+ |      Return the greater exponent tuple with respect to the negative
+ |      weighted degree lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` - exponent tuple
+ |      
+ |      - ``g`` - exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: t = TermOrder(&#39;negwdeglex&#39;,(1,2,3))
+ |          sage: P.&lt;x,y,z&gt; = PolynomialRing(QQbar, 3, order=t)
+ |          sage: f = x + y; f.lm() # indirect doctest
+ |          x
+ |          sage: f = x + x^2; f.lm()
+ |          x
+ |          sage: f = x^3 + z; f.lm()
+ |          x^3
+ |      
+ |      This method is called by the lm/lc/lt methods of
+ |      ``MPolynomial_polydict``.
+ |  
+ |  greater_tuple_negwdegrevlex(self, f, g)
+ |      Return the greater exponent tuple with respect to the negative
+ |      weighted degree reverse lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` - exponent tuple
+ |      
+ |      - ``g`` - exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: t = TermOrder(&#39;negwdegrevlex&#39;,(1,2,3))
+ |          sage: P.&lt;x,y,z&gt; = PolynomialRing(QQbar, 3, order=t)
+ |          sage: f = x + y; f.lm() # indirect doctest
+ |          x
+ |          sage: f = x + x^2; f.lm()
+ |          x
+ |          sage: f = x^3 + z; f.lm()
+ |          x^3
+ |      
+ |      This method is called by the lm/lc/lt methods of
+ |      ``MPolynomial_polydict``.
+ |  
+ |  greater_tuple_wdeglex(self, f, g)
+ |      Return the greater exponent tuple with respect to the weighted degree
+ |      lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` - exponent tuple
+ |      
+ |      - ``g`` - exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: t = TermOrder(&#39;wdeglex&#39;,(1,2,3))
+ |          sage: P.&lt;x,y,z&gt; = PolynomialRing(QQbar, 3, order=t)
+ |          sage: f = x + y; f.lm() # indirect doctest
+ |          y
+ |          sage: f = x*y + z; f.lm()
+ |          x*y
+ |      
+ |      This method is called by the lm/lc/lt methods of
+ |      ``MPolynomial_polydict``.
+ |  
+ |  greater_tuple_wdegrevlex(self, f, g)
+ |      Return the greater exponent tuple with respect to the weighted degree
+ |      reverse lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` - exponent tuple
+ |      
+ |      - ``g`` - exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: t = TermOrder(&#39;wdegrevlex&#39;,(1,2,3))
+ |          sage: P.&lt;x,y,z&gt; = PolynomialRing(QQbar, 3, order=t)
+ |          sage: f = x + y; f.lm() # indirect doctest
+ |          y
+ |          sage: f = x + y^2*z; f.lm()
+ |          y^2*z
+ |      
+ |      This method is called by the lm/lc/lt methods of
+ |      ``MPolynomial_polydict``.
+ |  
+ |  is_block_order(self)
+ |      Return true if self is a block term order.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: t=TermOrder(&#39;deglex&#39;,2)+TermOrder(&#39;lex&#39;,2)
+ |          sage: t.is_block_order()
+ |          True
+ |  
+ |  is_global(self)
+ |      Return true if this term order is definitely
+ |      global. Return false otherwise, which includes
+ |      unknown term orders.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: T = TermOrder(&#39;lex&#39;)
+ |          sage: T.is_global()
+ |          True
+ |          sage: T = TermOrder(&#39;degrevlex&#39;, 3) + TermOrder(&#39;degrevlex&#39;, 3)
+ |          sage: T.is_global()
+ |          True
+ |          sage: T = TermOrder(&#39;degrevlex&#39;, 3) + TermOrder(&#39;negdegrevlex&#39;, 3)
+ |          sage: T.is_global()
+ |          False
+ |          sage: T = TermOrder(&#39;degneglex&#39;, 3)
+ |          sage: T.is_global()
+ |          True
+ |  
+ |  is_local(self)
+ |      Return true if this term order is definitely
+ |      local. Return false otherwise, which includes
+ |      unknown term orders.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: T = TermOrder(&#39;lex&#39;)
+ |          sage: T.is_local()
+ |          False
+ |          sage: T = TermOrder(&#39;negdeglex&#39;, 3) + TermOrder(&#39;negdegrevlex&#39;, 3)
+ |          sage: T.is_local()
+ |          True
+ |          sage: T = TermOrder(&#39;degrevlex&#39;, 3) + TermOrder(&#39;negdegrevlex&#39;, 3)
+ |          sage: T.is_local()
+ |          False
+ |  
+ |  is_weighted_degree_order(self)
+ |      Return true if self is a weighted degree term order.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: t=TermOrder(&#39;wdeglex&#39;,(2,3))
+ |          sage: t.is_weighted_degree_order()
+ |          True
+ |  
+ |  macaulay2_str(self)
+ |      Return a Macaulay2 representation of self.
+ |      
+ |      Used to convert polynomial rings to their Macaulay2
+ |      representation.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P = PolynomialRing(GF(127), 8,names=&#39;x&#39;,order=&#39;degrevlex(3),lex(5)&#39;)
+ |          sage: T = P.term_order()
+ |          sage: T.macaulay2_str()
+ |          &#39;{GRevLex =&gt; 3,Lex =&gt; 5}&#39;
+ |          sage: P._macaulay2_() # optional - macaulay2
+ |           ZZ
+ |          ---[x0, x1, x2, x3, x4, x5, x6, x7, Degrees =&gt; {8:1}, Heft =&gt; {1}, MonomialOrder =&gt; {MonomialSize =&gt; 16}, DegreeRank =&gt; 1]
+ |          127                                                                                 {GRevLex =&gt; {3:1}  }
+ |                                                                                              {Lex =&gt; 5          }
+ |                                                                                              {Position =&gt; Up    }
+ |  
+ |  magma_str(self)
+ |      Return a MAGMA representation of self.
+ |      
+ |      Used to convert polynomial rings to their MAGMA representation.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P = PolynomialRing(GF(127), 10,names=&#39;x&#39;,order=&#39;degrevlex&#39;)
+ |          sage: magma(P)                                                        # optional - magma
+ |          Polynomial ring of rank 10 over GF(127)
+ |          Order: Graded Reverse Lexicographical
+ |          Variables: x0, x1, x2, x3, x4, x5, x6, x7, x8, x9
+ |      
+ |      ::
+ |      
+ |          sage: T = P.term_order()
+ |          sage: T.magma_str()
+ |          &#39;&#34;grevlex&#34;&#39;
+ |  
+ |  matrix(self)
+ |      Return the matrix defining matrix term order.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: t = TermOrder(&#34;M(1,2,0,1)&#34;)
+ |          sage: t.matrix()
+ |          [1 2]
+ |          [0 1]
+ |  
+ |  name(self)
+ |      EXAMPLES::
+ |      
+ |          sage: TermOrder(&#39;lex&#39;).name()
+ |          &#39;lex&#39;
+ |  
+ |  singular_moreblocks(self)
+ |      Return a the number of additional blocks SINGULAR needs to allocate
+ |      for handling non-native orderings like `degneglex`.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P = PolynomialRing(GF(127),10,names=&#39;x&#39;,order=&#39;lex(3),deglex(5),lex(2)&#39;)
+ |          sage: T = P.term_order()
+ |          sage: T.singular_moreblocks()
+ |          0
+ |          sage: P = PolynomialRing(GF(127),10,names=&#39;x&#39;,order=&#39;lex(3),degneglex(5),lex(2)&#39;)
+ |          sage: T = P.term_order()
+ |          sage: T.singular_moreblocks()
+ |          1
+ |          sage: P = PolynomialRing(GF(127),10,names=&#39;x&#39;,order=&#39;degneglex(5),degneglex(5)&#39;)
+ |          sage: T = P.term_order()
+ |          sage: T.singular_moreblocks()
+ |          2
+ |      
+ |      TESTS:
+ |      
+ |      The &#39;degneglex&#39; ordering is somehow special: SINGULAR handles it
+ |      using an extra weight vector block.
+ |      
+ |          sage: T = TermOrder(&#34;degneglex&#34;, 2)
+ |          sage: P = PolynomialRing(QQ,2, names=&#39;x&#39;, order=T)
+ |          sage: T = P.term_order()
+ |          sage: T.singular_moreblocks()
+ |          1
+ |          sage: T = TermOrder(&#34;degneglex&#34;, 2) + TermOrder(&#34;degneglex&#34;, 2)
+ |          sage: P = PolynomialRing(QQ,4, names=&#39;x&#39;, order=T)
+ |          sage: T = P.term_order()
+ |          sage: T.singular_moreblocks()
+ |          2
+ |  
+ |  singular_str(self)
+ |      Return a SINGULAR representation of self.
+ |      
+ |      Used to convert polynomial rings to their SINGULAR representation.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P = PolynomialRing(GF(127),10,names=&#39;x&#39;,order=&#39;lex(3),deglex(5),lex(2)&#39;)
+ |          sage: T = P.term_order()
+ |          sage: T.singular_str()
+ |          &#39;(lp(3),Dp(5),lp(2))&#39;
+ |          sage: P._singular_()
+ |          polynomial ring, over a field, global ordering
+ |          //   coefficients: ZZ/127
+ |          //   number of vars : 10
+ |          //        block   1 : ordering lp
+ |          //                  : names    x0 x1 x2
+ |          //        block   2 : ordering Dp
+ |          //                  : names    x3 x4 x5 x6 x7
+ |          //        block   3 : ordering lp
+ |          //                  : names    x8 x9
+ |          //        block   4 : ordering C
+ |      
+ |      TESTS:
+ |      
+ |      The &#39;degneglex&#39; ordering is somehow special, it looks like a block
+ |      ordering in SINGULAR.
+ |      
+ |          sage: T = TermOrder(&#34;degneglex&#34;, 2)
+ |          sage: P = PolynomialRing(QQ,2, names=&#39;x&#39;, order=T)
+ |          sage: T = P.term_order()
+ |          sage: T.singular_str()
+ |          &#39;(a(1:2),ls(2))&#39;
+ |      
+ |          sage: T = TermOrder(&#34;degneglex&#34;, 2) + TermOrder(&#34;degneglex&#34;, 2)
+ |          sage: P = PolynomialRing(QQ,4, names=&#39;x&#39;, order=T)
+ |          sage: T = P.term_order()
+ |          sage: T.singular_str()
+ |          &#39;(a(1:2),ls(2),a(1:2),ls(2))&#39;
+ |          sage: P._singular_()
+ |          polynomial ring, over a field, global ordering
+ |          //   coefficients: QQ
+ |          //   number of vars : 4
+ |          //        block   1 : ordering a
+ |          //                  : names    x0 x1
+ |          //                  : weights   1  1
+ |          //        block   2 : ordering ls
+ |          //                  : names    x0 x1
+ |          //        block   3 : ordering a
+ |          //                  : names    x2 x3
+ |          //                  : weights   1  1
+ |          //        block   4 : ordering ls
+ |          //                  : names    x2 x3
+ |          //        block   5 : ordering C
+ |  
+ |  sortkey_block(self, f)
+ |      Return the sortkey of an exponent tuple with respect to the
+ |      block order as specified when constructing this element.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` -- exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;a,b,c,d,e,f&gt;=PolynomialRing(QQbar, 6, order=&#39;degrevlex(3),degrevlex(3)&#39;)
+ |          sage: a &gt; c^4 # indirect doctest
+ |          False
+ |          sage: a &gt; e^4
+ |          True
+ |  
+ |  sortkey_deglex(self, f)
+ |      Return the sortkey of an exponent tuple with respect to the degree
+ |      lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` -- exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y&gt; = PolynomialRing(QQbar, 2, order=&#39;deglex&#39;)
+ |          sage: x &gt; y^2 # indirect doctest
+ |          False
+ |          sage: x &gt; 1
+ |          True
+ |  
+ |  sortkey_degneglex(self, f)
+ |      Return the sortkey of an exponent tuple with respect to the
+ |      degree negative lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` -- exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y,z&gt; = PolynomialRing(QQbar, 3, order=&#39;degneglex&#39;)
+ |          sage: x*y &gt; y*z # indirect doctest
+ |          False
+ |          sage: x*y &gt; x
+ |          True
+ |  
+ |  sortkey_degrevlex(self, f)
+ |      Return the sortkey of an exponent tuple with respect to the
+ |      degree reversed lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` -- exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y&gt; = PolynomialRing(QQbar, 2, order=&#39;degrevlex&#39;)
+ |          sage: x &gt; y^2 # indirect doctest
+ |          False
+ |          sage: x &gt; 1
+ |          True
+ |  
+ |  sortkey_invlex(self, f)
+ |      Return the sortkey of an exponent tuple with respect to the inversed
+ |      lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` -- exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y&gt; = PolynomialRing(QQbar, 2, order=&#39;invlex&#39;)
+ |          sage: x &gt; y^2 # indirect doctest
+ |          False
+ |          sage: x &gt; 1
+ |          True
+ |  
+ |  sortkey_lex(self, f)
+ |      Return the sortkey of an exponent tuple with respect to the
+ |      lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` -- exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y&gt; = PolynomialRing(QQbar, 2, order=&#39;lex&#39;)
+ |          sage: x &gt; y^2 # indirect doctest
+ |          True
+ |          sage: x &gt; 1
+ |          True
+ |  
+ |  sortkey_matrix(self, f)
+ |      Return the sortkey of an exponent tuple with respect to the matrix
+ |      term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` - exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y&gt; = PolynomialRing(QQbar, 2, order=&#39;m(1,3,1,0)&#39;)
+ |          sage: y &gt; x^2 # indirect doctest
+ |          True
+ |          sage: y &gt; x^3
+ |          False
+ |  
+ |  sortkey_negdeglex(self, f)
+ |      Return the sortkey of an exponent tuple with respect to the
+ |      negative degree lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` -- exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y&gt; = PolynomialRing(QQbar, 2, order=&#39;negdeglex&#39;)
+ |          sage: x &gt; y^2 # indirect doctest
+ |          True
+ |          sage: x &gt; 1
+ |          False
+ |  
+ |  sortkey_negdegrevlex(self, f)
+ |      Return the sortkey of an exponent tuple with respect to the
+ |      negative degree reverse lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` -- exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y&gt; = PolynomialRing(QQbar, 2, order=&#39;negdegrevlex&#39;)
+ |          sage: x &gt; y^2 # indirect doctest
+ |          True
+ |          sage: x &gt; 1
+ |          False
+ |  
+ |  sortkey_neglex(self, f)
+ |      Return the sortkey of an exponent tuple with respect to the negative
+ |      lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` -- exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: P.&lt;x,y&gt; = PolynomialRing(QQbar, 2, order=&#39;neglex&#39;)
+ |          sage: x &gt; y^2 # indirect doctest
+ |          False
+ |          sage: x &gt; 1
+ |          False
+ |  
+ |  sortkey_negwdeglex(self, f)
+ |      Return the sortkey of an exponent tuple with respect to the
+ |      negative weighted degree lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` -- exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: t = TermOrder(&#39;negwdeglex&#39;,(3,2))
+ |          sage: P.&lt;x,y&gt; = PolynomialRing(QQbar, 2, order=t)
+ |          sage: x &gt; y^2 # indirect doctest
+ |          True
+ |          sage: x^2 &gt; y^3
+ |          True
+ |  
+ |  sortkey_negwdegrevlex(self, f)
+ |      Return the sortkey of an exponent tuple with respect to the
+ |      negative weighted degree reverse lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` -- exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: t = TermOrder(&#39;negwdegrevlex&#39;,(3,2))
+ |          sage: P.&lt;x,y&gt; = PolynomialRing(QQbar, 2, order=t)
+ |          sage: x &gt; y^2 # indirect doctest
+ |          True
+ |          sage: x^2 &gt; y^3
+ |          True
+ |  
+ |  sortkey_wdeglex(self, f)
+ |      Return the sortkey of an exponent tuple with respect to the
+ |      weighted degree lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` -- exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: t = TermOrder(&#39;wdeglex&#39;,(3,2))
+ |          sage: P.&lt;x,y&gt; = PolynomialRing(QQbar, 2, order=t)
+ |          sage: x &gt; y^2 # indirect doctest
+ |          False
+ |          sage: x &gt; y
+ |          True
+ |  
+ |  sortkey_wdegrevlex(self, f)
+ |      Return the sortkey of an exponent tuple with respect to the
+ |      weighted degree reverse lexicographical term order.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` -- exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: t = TermOrder(&#39;wdegrevlex&#39;,(3,2))
+ |          sage: P.&lt;x,y&gt; = PolynomialRing(QQbar, 2, order=t)
+ |          sage: x &gt; y^2 # indirect doctest
+ |          False
+ |          sage: x^2 &gt; y^3
+ |          True
+ |  
+ |  tuple_weight(self, f)
+ |      Return the weight of tuple f.
+ |      
+ |      INPUT:
+ |      
+ |      - ``f`` - exponent tuple
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: t=TermOrder(&#39;wdeglex&#39;,(1,2,3))
+ |          sage: P.&lt;a,b,c&gt;=PolynomialRing(QQbar, order=t)
+ |          sage: P.term_order().tuple_weight([3,2,1])
+ |          10
+ |  
+ |  weights(self)
+ |      Return the weights for weighted term orders.
+ |      
+ |      EXAMPLES::
+ |      
+ |          sage: t=TermOrder(&#39;wdeglex&#39;,(2,3))
+ |          sage: t.weights()
+ |          (2, 3)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from sage.structure.sage_object.SageObject:
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  __pari__(...)
+ |      SageObject.__pari__(self)
+ |      File: sage/structure/sage_object.pyx (starting at line 977)
+ |  
+ |  __repr__(...)
+ |      File: sage/structure/sage_object.pyx (starting at line 198)
+ |      
+ |      Default method for string representation.
+ |      
+ |      .. NOTE::
+ |      
+ |          Do not overwrite this method. Instead, implement
+ |          a ``_repr_`` (single underscore) method.
+ |      
+ |      EXAMPLES:
+ |      
+ |      By default, the string representation coincides with
+ |      the output of the single underscore ``_repr_``::
+ |      
+ |          sage: P.&lt;x&gt; = QQ[]
+ |          sage: repr(P) == P._repr_()  #indirect doctest
+ |          True
+ |      
+ |      Using :meth:`rename`, the string representation can
+ |      be customized::
+ |      
+ |          sage: P.rename(&#39;A polynomial ring&#39;)
+ |          sage: repr(P) == P._repr_()
+ |          False
+ |      
+ |      The original behaviour is restored with :meth:`reset_name`.::
+ |      
+ |          sage: P.reset_name()
+ |          sage: repr(P) == P._repr_()
+ |          True
+ |      
+ |      If there is no ``_repr_`` method defined, we fall back to the
+ |      super class (typically ``object``)::
+ |      
+ |          sage: from sage.structure.sage_object import SageObject
+ |          sage: S = SageObject()
+ |          sage: S
+ |          &lt;sage.structure.sage_object.SageObject object at ...&gt;
+ |  
+ |  category(...)
+ |      SageObject.category(self)
+ |      File: sage/structure/sage_object.pyx (starting at line 526)
+ |  
+ |  dump(...)
+ |      SageObject.dump(self, filename, compress=True)
+ |      File: sage/structure/sage_object.pyx (starting at line 487)
+ |      
+ |              Same as self.save(filename, compress)
+ |  
+ |  dumps(...)
+ |      SageObject.dumps(self, compress=True)
+ |      File: sage/structure/sage_object.pyx (starting at line 493)
+ |      
+ |              Dump ``self`` to a string ``s``, which can later be reconstituted
+ |              as ``self`` using ``loads(s)``.
+ |      
+ |              There is an optional boolean argument ``compress`` which defaults to ``True``.
+ |      
+ |              EXAMPLES::
+ |      
+ |                  sage: from sage.misc.persist import comp
+ |                  sage: O = SageObject()
+ |                  sage: p_comp = O.dumps()
+ |                  sage: p_uncomp = O.dumps(compress=False)
+ |                  sage: comp.decompress(p_comp) == p_uncomp
+ |                  True
+ |                  sage: import pickletools
+ |                  sage: pickletools.dis(p_uncomp)
+ |                      0: \x80 PROTO      2
+ |                      2: c    GLOBAL     &#39;sage.structure.sage_object SageObject&#39;
+ |                     41: q    BINPUT     ...
+ |                     43: )    EMPTY_TUPLE
+ |                     44: \x81 NEWOBJ
+ |                     45: q    BINPUT     ...
+ |                     47: .    STOP
+ |                  highest protocol among opcodes = 2
+ |  
+ |  parent(...)
+ |      SageObject.parent(self)
+ |      File: sage/structure/sage_object.pyx (starting at line 560)
+ |      
+ |              Return the type of ``self`` to support the coercion framework.
+ |      
+ |              EXAMPLES::
+ |      
+ |                  sage: t = log(sqrt(2) - 1) + log(sqrt(2) + 1); t
+ |                  log(sqrt(2) + 1) + log(sqrt(2) - 1)
+ |                  sage: u = t.maxima_methods()
+ |                  sage: u.parent()
+ |                  &lt;class &#39;sage.symbolic.maxima_wrapper.MaximaWrapper&#39;&gt;
+ |  
+ |  rename(...)
+ |      SageObject.rename(self, x=None)
+ |      File: sage/structure/sage_object.pyx (starting at line 121)
+ |      
+ |              Change self so it prints as x, where x is a string.
+ |      
+ |              .. NOTE::
+ |      
+ |                 This is *only* supported for Python classes that derive
+ |                 from SageObject.
+ |      
+ |              EXAMPLES::
+ |      
+ |                  sage: x = PolynomialRing(QQ, &#39;x&#39;, sparse=True).gen()
+ |                  sage: g = x^3 + x - 5
+ |                  sage: g
+ |                  x^3 + x - 5
+ |                  sage: g.rename(&#39;a polynomial&#39;)
+ |                  sage: g
+ |                  a polynomial
+ |                  sage: g + x
+ |                  x^3 + 2*x - 5
+ |                  sage: h = g^100
+ |                  sage: str(h)[:20]
+ |                  &#39;x^300 + 100*x^298 - &#39;
+ |                  sage: h.rename(&#39;x^300 + ...&#39;)
+ |                  sage: h
+ |                  x^300 + ...
+ |      
+ |              Real numbers are not Python classes, so rename is not supported::
+ |      
+ |                  sage: a = 3.14
+ |                  sage: type(a)
+ |                  &lt;... &#39;sage.rings.real_mpfr.RealLiteral&#39;&gt;
+ |                  sage: a.rename(&#39;pi&#39;)
+ |                  Traceback (most recent call last):
+ |                  ...
+ |                  NotImplementedError: object does not support renaming: 3.14000000000000
+ |      
+ |              .. NOTE::
+ |      
+ |                 The reason C-extension types are not supported by default
+ |                 is if they were then every single one would have to carry
+ |                 around an extra attribute, which would be slower and waste
+ |                 a lot of memory.
+ |      
+ |                 To support them for a specific class, add a
+ |                 ``cdef public __custom_name`` attribute.
+ |  
+ |  reset_name(...)
+ |      SageObject.reset_name(self)
+ |      File: sage/structure/sage_object.pyx (starting at line 178)
+ |      
+ |              Remove the custom name of an object.
+ |      
+ |              EXAMPLES::
+ |      
+ |                  sage: P.&lt;x&gt; = QQ[]
+ |                  sage: P
+ |                  Univariate Polynomial Ring in x over Rational Field
+ |                  sage: P.rename(&#39;A polynomial ring&#39;)
+ |                  sage: P
+ |                  A polynomial ring
+ |                  sage: P.reset_name()
+ |                  sage: P
+ |                  Univariate Polynomial Ring in x over Rational Field
+ |  
+ |  save(...)
+ |      SageObject.save(self, filename=None, compress=True)
+ |      File: sage/structure/sage_object.pyx (starting at line 462)
+ |      
+ |              Save self to the given filename.
+ |      
+ |              EXAMPLES::
+ |      
+ |                  sage: f = x^3 + 5
+ |                  sage: f.save(os.path.join(SAGE_TMP, &#39;file&#39;))
+ |                  sage: load(os.path.join(SAGE_TMP, &#39;file.sobj&#39;))
+ |                  x^3 + 5
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Par exemple, des ordres à poids</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">I</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="n">TermOrder</span><span class="p">(</span><span class="s1">&#39;wdegrevlex&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">])))</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[x - y^2, y^3 - y^2]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">I</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="n">TermOrder</span><span class="p">(</span><span class="s1">&#39;wdegrevlex&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">])))</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[y^2 - x, x*y - x, x^2 - x]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La BdG universelle de $I$ est l'union de toutes les BdG de $I$ pour tout ordre admissible.</p>
+<p>Nous ne pouvons pas tester l'infinité des ordres admissibles, mais, au vu des calculs précédents, nous pouvons conjecturer que $$G = \{x - y^2, y^3 - y^2, xy - x, x^2 - x\}$$ est une BdG universelle pour $I = 〈x-y^2,xy-x〉$.</p>
+<p>Pour le prouver, on observe que $LM(G)$ ne dépend que de l'ordre relatif de $x$ et $y^2$, en effet, à l'exclusion de $x-y^2$, tous les polynômes de $G$ ont un unique monome divisible par tous les autres, qui se trouve donc être le monome de tête dans tout ordre admissible. On a donc:</p>
+$$〈LM(G)〉 = \begin{cases}
+〈x, y^3〉 &amp;\text{si $x &gt; y^2$,}\\
+〈y^2, xy, x^2〉 &amp;\text{sinon.}
+\end{cases}$$<p>Puisque $G⊂I$, il est immédiat que $〈LM(G)〉 ⊂ 〈LM(I)〉$; il reste donc à montrer l'inclusion inverse.</p>
+<p>Commençons par le cas $x&gt;y^2$ et supposons que $〈LM(I)〉\not⊂〈LM(G)〉$, ceci implique qu'il existe un polynôme $ay^2+by+c∈I$, avec $a,b,c$ non tous nuls (remarque: les monomes $1,y,y^2$ sont les monômes de l'escalier de $〈LM(G)〉$). Mais la BdG pour l'ordre <em>lex</em> nous montre qu'il n'existe pas de tel polynôme.</p>
+<p>De façon similaire, si $y^2 &gt; x$, on vérifie en regardant la BdG pour l'ordre invlex qu'il n'existe pas de polynôme $ay+bx+c$ avec $a,b,c$ non tous nuls.</p>
+<p>Nous pouvons donc conclure que $〈LM(I)〉=〈LM(G)〉$ pour tout ordre admissible.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exo-8.1">Exo 8.1<a class="anchor-link" href="#Exo-8.1">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span><span class="o">.&lt;</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">PolynomialRing</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;lex&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">P1</span> <span class="o">=</span> <span class="n">x</span><span class="o">^</span><span class="mi">3</span><span class="o">*</span><span class="n">y</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span>
+<span class="n">P2</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">4</span> <span class="o">-</span> <span class="n">y</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La syzygie est définie à un inversible près</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">P1</span> <span class="o">-</span> <span class="n">y</span><span class="o">*</span><span class="n">P2</span>
+<span class="n">S</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-6*x^3*y^2 + 3*x^2 + y^2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pour vérifier le crytère de Buchberger, nous devons diviser $S$ par notre base candidate.</p>
+<p><strong>Attention:</strong> l'opérateur <code>%</code> ne respect pas l'ordre (bug?)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">S</span> <span class="o">%</span> <span class="n">P1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-3*x^4*y + y^2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>L'opérateur <code>mod</code> marche correctement</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">S2</span> <span class="o">=</span> <span class="n">S</span><span class="o">.</span><span class="n">mod</span><span class="p">(</span><span class="n">P1</span><span class="p">)</span>
+<span class="n">S2</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-12*x^2*y^3 + 3*x^2 + 6*x*y + y^2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>et on découvre que $S$ n'est pas réductible par $\{P_1,P_2\}$, ce qui montre que $\{P_1,P_2\}$ n'est pas une BdG</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">S2</span><span class="o">.</span><span class="n">mod</span><span class="p">(</span><span class="n">P1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-12*x^2*y^3 + 3*x^2 + 6*x*y + y^2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">S2</span><span class="o">.</span><span class="n">mod</span><span class="p">(</span><span class="n">P2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[16]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-12*x^2*y^3 + 3*x^2 + 6*x*y + y^2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Vérification</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">I</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">ideal</span><span class="p">(</span><span class="n">P1</span><span class="p">,</span> <span class="n">P2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">I</span><span class="o">.</span><span class="n">basis_is_groebner</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">I</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[19]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[x - 52/21*y^7 + 493/252*y^4 - 1/84*y, y^10 - 49/48*y^7 + 1/8*y^4 - 3/16*y]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exo-10.1">Exo 10.1<a class="anchor-link" href="#Exo-10.1">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span><span class="o">.&lt;</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">PolynomialRing</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;lex&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">I</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">ideal</span><span class="p">(</span><span class="n">y</span><span class="o">^</span><span class="mi">4</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">3</span> <span class="o">-</span> <span class="n">y</span><span class="o">^</span><span class="mi">4</span> <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span>
+            <span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">^</span><span class="mi">4</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="o">^</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">^</span><span class="mi">4</span> <span class="o">+</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[22]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()</span>
+<span class="n">G</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[x^2 - 1/16*y^4, x*y^4 - y^4, y^5 - 2*y^4]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On a le générateur de $I∩ℚ[y]$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">G</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[24]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>y^5 - 2*y^4</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>En changeant l'ordre de $x$ et $y$, on obtient le générateur de $I∩ℚ[x]$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">names</span><span class="o">=</span><span class="s1">&#39;y,x&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()</span>
+<span class="n">G</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[25]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[y^4 - 16*x^2, y*x^2 - 2*x^2, x^3 - x^2]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">G</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[26]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>x^3 - x^2</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Un raccourci</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">I</span><span class="o">.</span><span class="n">elimination_ideal</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Ideal (x^3 - x^2) of Multivariate Polynomial Ring in x, y over Rational Field</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exo-12.2">Exo 12.2<a class="anchor-link" href="#Exo-12.2">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span><span class="o">.&lt;</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">PolynomialRing</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;lex&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">I</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">ideal</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">3</span><span class="p">,</span>
+            <span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="n">y</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">f</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[30]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>y^3 - y</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">names</span><span class="o">=</span><span class="s1">&#39;y,x&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">g</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[31]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>x^4 - 4*x^2 + 3</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La projection de $V(I)$ sur les deux axes est finie, on déduit que l'idéal est $0$-dimensionnel.
+On retrouve les composants de $V(I)$ en factorisant les deux idéaux d'élimination, on déduit que $V(I)$ contient au plus 6 points dans $ℚ$, et au plus 12 dans $ℚ[\sqrt{3}]$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">factor</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[32]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>y * (y - 1) * (y + 1)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span><span class="o">.</span><span class="n">factor</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[33]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(x - 1) * (x + 1) * (x^2 - 3)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On retrouve $V(I)$ en <em>remontant</em> les projections. Par exemple, en partant de $y=-1,0,1$, on retrouve les valeurs de $x$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()</span>
+<span class="n">G</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[34]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[x^2 + 2*y^2 - 3, x*y - y^2, y^3 - y]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Le deuxième générateur nous donne les deux solutions $x=y=±1$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">G</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[38]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>x - 1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">G</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">y</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[39]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-x - 1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Par contre, il ne nous donne pas d'informations sur $y=0$; pour ça, nous regardons la première équation, qui nous donne les solutions $(0,±\sqrt{3})$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">G</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[40]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">G</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[41]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>x^2 - 3</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exo-10.2">Exo 10.2<a class="anchor-link" href="#Exo-10.2">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span><span class="o">.&lt;</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">,</span><span class="n">t</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">PolynomialRing</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;lex&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">I</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">ideal</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">-</span> <span class="n">z</span><span class="p">,</span>
+            <span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">5</span><span class="o">*</span><span class="n">t</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()</span>
+<span class="n">G</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[44]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[x + y - z, y^2 - 5*t^2, y*z - 1/2*z^2 - 3/2*t^2, y*t^2 + 1/6*z^3 - 17/6*z*t^2, z^4 - 14*z^2*t^2 + 9*t^4]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>L'exercice a essayé de nous confondre les idées en nous donnant un idéal homogène. Déshomogéneisons.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">J</span> <span class="o">=</span> <span class="n">I</span> <span class="o">+</span> <span class="n">A</span><span class="o">.</span><span class="n">ideal</span><span class="p">(</span><span class="n">t</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">J</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[45]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Ideal (x + y - z, x^2 - 2*t^2, y^2 - 5*t^2, t - 1) of Multivariate Polynomial Ring in x, y, z, t over Rational Field</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">J</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()</span>
+<span class="n">G</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[46]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[x - 1/6*z^3 + 11/6*z, y + 1/6*z^3 - 17/6*z, z^4 - 14*z^2 + 9, t - 1]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On voit qu'il s'agit d'un idéal $0$-dimensionnel, et nous obtenons un polynôme (irréductible) qui s'annule sur $z$.
+Puisque $x^2 = 2$, $y^2 = 5$ et $z=x+y$, nous en déduisons le polynôme minimal de $\sqrt{2}+\sqrt{5}$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">G</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">f</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[47]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>z^4 - 14*z^2 + 9</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">univariate_polynomial</span><span class="p">()</span><span class="o">.</span><span class="n">is_irreducible</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[48]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ce résultant nous donne le même résultat. On peut généraliser à une formule donnant le polynôme minimal de tout nombre algébrique obtenu comme la somme de deux autres nombres algébriques.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">z</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">y</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">5</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="o">.</span><span class="n">resultant</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[50]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>z^4 - 14*z^2 + 9</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pour exprimer $x=±\sqrt{2}$ et $y=±\sqrt{5}$ en fonction de $z$, il suffit de regarder les autres polynômes de la base de Gröbner.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">G</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">f</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[51]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>x - 1/6*z^3 + 11/6*z</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span><span class="o">.</span><span class="n">expand</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[52]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>x - sqrt(2)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">G</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[53]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>y + 1/6*z^3 - 17/6*z</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+ 
+
