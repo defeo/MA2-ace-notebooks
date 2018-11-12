@@ -1,0 +1,1634 @@
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="TD-6">TD 6<a class="anchor-link" href="#TD-6">&#182;</a></h1><h2 id="Exo-10.3">Exo 10.3<a class="anchor-link" href="#Exo-10.3">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">A</span><span class="o">.&lt;</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">QQ</span><span class="p">[]</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">2</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">x</span><span class="o">^</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">7</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">resultant</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">y</span><span class="o">-</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">h</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>y^6 - 6*y^4 - 14*y^3 + 12*y^2 - 84*y + 41</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On vérifie que $2^{1/2} + 7^{1/3}$ est bien une racine</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">h</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="o">^</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">7</span><span class="o">^</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">expand</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exo-10.5">Exo 10.5<a class="anchor-link" href="#Exo-10.5">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">A</span><span class="o">.&lt;</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">QQ</span><span class="p">[]</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">X</span><span class="o">^</span><span class="mi">4</span> <span class="o">+</span> <span class="n">Y</span><span class="o">^</span><span class="mi">4</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">X</span><span class="o">^</span><span class="mi">5</span><span class="o">*</span><span class="n">Y</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">X</span><span class="o">^</span><span class="mi">3</span><span class="o">*</span><span class="n">Y</span><span class="o">^</span><span class="mi">3</span> <span class="o">+</span> <span class="n">X</span><span class="o">^</span><span class="mi">2</span><span class="o">*</span><span class="n">Y</span><span class="o">^</span><span class="mi">5</span> <span class="o">-</span> <span class="mi">1</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La projection de la variété sur l'axe des $X$ est composée de 28 points</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">h</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">resultant</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+<span class="n">h</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2*X^28 - 16*X^27 + 32*X^26 + 249*X^24 + 48*X^23 - 128*X^22 + 4*X^21 - 757*X^20 - 112*X^19 + 192*X^18 - 12*X^17 + 758*X^16 + 144*X^15 - 126*X^14 + 28*X^13 - 251*X^12 - 64*X^11 + 30*X^10 - 36*X^9 - X^8 + 16*X^5 + 1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Seulement 4 de ces points sont réels</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">h</span><span class="o">.</span><span class="n">change_ring</span><span class="p">(</span><span class="n">RR</span><span class="p">)</span><span class="o">.</span><span class="n">factor</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(2.00000000000000) * (X - 0.966506296874216) * (X - 0.721113386166218) * (X + 0.597428986963397) * (X + 0.924209668349044) * (X^2 - 9.64588608545517*X + 27.2478986510189) * (X^2 - 2.07381031598562*X + 1.07569410961252) * (X^2 - 0.893217025895166*X + 0.295336342296285) * (X^2 - 0.779939824160087*X + 0.428337852683492) * (X^2 - 0.121266599180110*X + 1.03967187384805) * (X^2 - 0.0603056667782709*X + 0.938887472264107) * (X^2 + 0.0272947089885237*X + 1.03310413303256) * (X^2 + 0.228048118439437*X + 0.407906285068887) * (X^2 + 0.525249644063553*X + 0.343345271720577) * (X^2 + 1.29090151259232*X + 0.509689390328851) * (X^2 + 1.65011569846010*X + 4.77398949422654) * (X^2 + 2.01879686263848*X + 1.01964113877716)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pour mieux manipuler le polynôme $h$, on change son parent</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">H</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">univariate_polynomial</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">parent</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Multivariate Polynomial Ring in X, Y over Rational Field</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">parent</span><span class="p">(</span><span class="n">H</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Univariate Polynomial Ring in X over Rational Field</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On peut voir directement ses racines réelles</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">H</span><span class="o">.</span><span class="n">roots</span><span class="p">(</span><span class="n">RR</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(-0.924209668349044, 1),
+ (-0.597428986963397, 1),
+ (0.721113386166218, 1),
+ (0.966506296874216, 1)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span>H.roots<span class="o">?</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre><span class="ansi-red-fg">Docstring:</span>     
+   Return the roots of this polynomial (by default, in the base ring
+   of this polynomial).
+
+   INPUT:
+
+   * &#34;ring&#34; - the ring to find roots in
+
+   * &#34;multiplicities&#34; - bool (default: True) if True return list of
+     pairs (r, n), where r is the root and n is the multiplicity. If
+     False, just return the unique roots, with no information about
+     multiplicities.
+
+   * &#34;algorithm&#34; - the root-finding algorithm to use. We attempt to
+     select a reasonable algorithm by default, but this lets the
+     caller override our choice.
+
+   By default, this finds all the roots that lie in the base ring of
+   the polynomial. However, the ring parameter can be used to specify
+   a ring to look for roots in.
+
+   If the polynomial and the output ring are both exact (integers,
+   rationals, finite fields, etc.), then the output should always be
+   correct (or raise an exception, if that case is not yet handled).
+
+   If the output ring is approximate (floating-point real or complex
+   numbers), then the answer will be estimated numerically, using
+   floating-point arithmetic of at least the precision of the output
+   ring. If the polynomial is ill-conditioned, meaning that a small
+   change in the coefficients of the polynomial will lead to a
+   relatively large change in the location of the roots, this may give
+   poor results. Distinct roots may be returned as multiple roots,
+   multiple roots may be returned as distinct roots, real roots may be
+   lost entirely (because the numerical estimate thinks they are
+   complex roots). Note that polynomials with multiple roots are
+   always ill-conditioned; there&#39;s a footnote at the end of the
+   docstring about this.
+
+   If the output ring is a RealIntervalField or ComplexIntervalField
+   of a given precision, then the answer will always be correct (or an
+   exception will be raised, if a case is not implemented). Each root
+   will be contained in one of the returned intervals, and the
+   intervals will be disjoint. (The returned intervals may be of
+   higher precision than the specified output ring.)
+
+   At the end of this docstring (after the examples) is a description
+   of all the cases implemented in this function, and the algorithms
+   used. That section also describes the possibilities for
+   &#34;algorithm=&#34;, for the cases where multiple algorithms exist.
+
+   EXAMPLES:
+
+      sage: x = QQ[&#39;x&#39;].0
+      sage: f = x^3 - 1
+      sage: f.roots()
+      [(1, 1)]
+      sage: f.roots(ring=CC)   # note -- low order bits slightly different on ppc.
+      [(1.00000000000000, 1), (-0.500000000000000 - 0.86602540378443...*I, 1), (-0.500000000000000 + 0.86602540378443...*I, 1)]
+      sage: f = (x^3 - 1)^2
+      sage: f.roots()
+      [(1, 2)]
+
+      sage: f = -19*x + 884736
+      sage: f.roots()
+      [(884736/19, 1)]
+      sage: (f^20).roots()
+      [(884736/19, 20)]
+
+      sage: K.&lt;z&gt; = CyclotomicField(3)
+      sage: f = K.defining_polynomial()
+      sage: f.roots(ring=GF(7))
+      [(4, 1), (2, 1)]
+      sage: g = f.change_ring(GF(7))
+      sage: g.roots()
+      [(4, 1), (2, 1)]
+      sage: g.roots(multiplicities=False)
+      [4, 2]
+
+   A new ring.  In the example below, we add the special method
+   _roots_univariate_polynomial to the base ring, and observe that
+   this method is called instead to find roots of polynomials over
+   this ring.  This facility can be used to easily extend root finding
+   to work over new rings you introduce:
+
+      sage: R.&lt;x&gt; = QQ[]
+      sage: (x^2 + 1).roots()
+      []
+      sage: g = lambda f, *args, **kwds: f.change_ring(CDF).roots()
+      sage: QQ._roots_univariate_polynomial = g
+      sage: (x^2 + 1).roots()  # abs tol 1e-14
+      [(2.7755575615628914e-17 - 1.0*I, 1), (0.9999999999999997*I, 1)]
+      sage: del QQ._roots_univariate_polynomial
+
+   An example over RR, which illustrates that only the roots in RR are
+   returned:
+
+      sage: x = RR[&#39;x&#39;].0
+      sage: f = x^3 -2
+      sage: f.roots()
+      [(1.25992104989487, 1)]
+      sage: f.factor()
+      (x - 1.25992104989487) * (x^2 + 1.25992104989487*x + 1.58740105196820)
+      sage: x = RealField(100)[&#39;x&#39;].0
+      sage: f = x^3 -2
+      sage: f.roots()
+      [(1.2599210498948731647672106073, 1)]
+
+      sage: x = CC[&#39;x&#39;].0
+      sage: f = x^3 -2
+      sage: f.roots()
+      [(1.25992104989487, 1), (-0.62996052494743... - 1.09112363597172*I, 1), (-0.62996052494743... + 1.09112363597172*I, 1)]
+      sage: f.roots(algorithm=&#39;pari&#39;)
+      [(1.25992104989487, 1), (-0.629960524947437 - 1.09112363597172*I, 1), (-0.629960524947437 + 1.09112363597172*I, 1)]
+
+   Another example showing that only roots in the base ring are
+   returned:
+
+      sage: x = polygen(ZZ)
+      sage: f = (2*x-3) * (x-1) * (x+1)
+      sage: f.roots()
+      [(1, 1), (-1, 1)]
+      sage: f.roots(ring=QQ)
+      [(3/2, 1), (1, 1), (-1, 1)]
+
+   An example involving large numbers:
+
+      sage: x = RR[&#39;x&#39;].0
+      sage: f = x^2 - 1e100
+      sage: f.roots()
+      [(-1.00000000000000e50, 1), (1.00000000000000e50, 1)]
+      sage: f = x^10 - 2*(5*x-1)^2
+      sage: f.roots(multiplicities=False)
+      [-1.6772670339941..., 0.19995479628..., 0.20004530611..., 1.5763035161844...]
+
+      sage: x = CC[&#39;x&#39;].0
+      sage: i = CC.0
+      sage: f = (x - 1)*(x - i)
+      sage: f.roots(multiplicities=False)
+      [1.00000000000000, 1.00000000000000*I]
+      sage: g=(x-1.33+1.33*i)*(x-2.66-2.66*i)
+      sage: g.roots(multiplicities=False)
+      [1.33000000000000 - 1.33000000000000*I, 2.66000000000000 + 2.66000000000000*I]
+
+   Describing roots using radical expressions:
+
+      sage: x = QQ[&#39;x&#39;].0
+      sage: f = x^2 + 2
+      sage: f.roots(SR)
+      [(-I*sqrt(2), 1), (I*sqrt(2), 1)]
+      sage: f.roots(SR, multiplicities=False)
+      [-I*sqrt(2), I*sqrt(2)]
+
+   The roots of some polynomials can&#39;t be described using radical
+   expressions:
+
+      sage: (x^5 - x + 1).roots(SR)
+      []
+
+   For some other polynomials, no roots can be found at the moment due
+   to the way roots are computed. https://trac.sagemath.org/17516
+   addresses these defecits. Until that gets implemented, one such
+   example is the following:
+
+      sage: f = x^6-300*x^5+30361*x^4-1061610*x^3+1141893*x^2-915320*x+101724
+      sage: f.roots()
+      []
+
+   A purely symbolic roots example:
+
+      sage: X = var(&#39;X&#39;)
+      sage: f = expand((X-1)*(X-I)^3*(X^2 - sqrt(2))); f
+      X^6 - (3*I + 1)*X^5 - sqrt(2)*X^4 + (3*I - 3)*X^4 + (3*I + 1)*sqrt(2)*X^3 + (I + 3)*X^3 - (3*I - 3)*sqrt(2)*X^2 - I*X^2 - (I + 3)*sqrt(2)*X + I*sqrt(2)
+      sage: f.roots()
+      [(I, 3), (-2^(1/4), 1), (2^(1/4), 1), (1, 1)]
+
+   The same operation, performed over a polynomial ring with symbolic
+   coefficients:
+
+      sage: X = SR[&#39;X&#39;].0
+      sage: f = (X-1)*(X-I)^3*(X^2 - sqrt(2)); f
+      X^6 + (-3*I - 1)*X^5 + (-sqrt(2) + 3*I - 3)*X^4 + ((3*I + 1)*sqrt(2) + I + 3)*X^3 + (-(3*I - 3)*sqrt(2) - I)*X^2 + (-(I + 3)*sqrt(2))*X + I*sqrt(2)
+      sage: f.roots()
+      [(I, 3), (-2^(1/4), 1), (2^(1/4), 1), (1, 1)]
+      sage: f.roots(multiplicities=False)
+      [I, -2^(1/4), 2^(1/4), 1]
+
+   A couple of examples where the base ring doesn&#39;t have a
+   factorization algorithm (yet). Note that this is currently done via
+   naive enumeration, so could be very slow:
+
+      sage: R = Integers(6)
+      sage: S.&lt;x&gt; = R[&#39;x&#39;]
+      sage: p = x^2-1
+      sage: p.roots()
+      Traceback (most recent call last):
+      ...
+      NotImplementedError: root finding with multiplicities for this polynomial not implemented (try the multiplicities=False option)
+      sage: p.roots(multiplicities=False)
+      [1, 5]
+      sage: R = Integers(9)
+      sage: A = PolynomialRing(R, &#39;y&#39;)
+      sage: y = A.gen()
+      sage: f = 10*y^2 - y^3 - 9
+      sage: f.roots(multiplicities=False)
+      [0, 1, 3, 6]
+
+   An example over the complex double field (where root finding is
+   fast, thanks to NumPy):
+
+      sage: R.&lt;x&gt; = CDF[]
+      sage: f = R.cyclotomic_polynomial(5); f
+      x^4 + x^3 + x^2 + x + 1.0
+      sage: f.roots(multiplicities=False)  # abs tol 1e-9
+      [-0.8090169943749469 - 0.5877852522924724*I, -0.8090169943749473 + 0.5877852522924724*I, 0.30901699437494773 - 0.951056516295154*I, 0.30901699437494756 + 0.9510565162951525*I]
+      sage: [z^5 for z in f.roots(multiplicities=False)]  # abs tol 2e-14
+      [0.9999999999999957 - 1.2864981197413038e-15*I, 0.9999999999999976 + 3.062854959141552e-15*I, 1.0000000000000024 + 1.1331077795295987e-15*I, 0.9999999999999953 - 2.0212861992297117e-15*I]
+      sage: f = CDF[&#39;x&#39;]([1,2,3,4]); f
+      4.0*x^3 + 3.0*x^2 + 2.0*x + 1.0
+      sage: r = f.roots(multiplicities=False)
+      sage: [f(a).abs() for a in r]  # abs tol 1e-14
+      [2.574630599127759e-15, 1.457101633618084e-15, 1.1443916996305594e-15]
+
+   Another example over RDF:
+
+      sage: x = RDF[&#39;x&#39;].0
+      sage: ((x^3 -1)).roots()  # abs tol 4e-16
+      [(1.0000000000000002, 1)]
+      sage: ((x^3 -1)).roots(multiplicities=False)  # abs tol 4e-16
+      [1.0000000000000002]
+
+   More examples involving the complex double field:
+
+      sage: x = CDF[&#39;x&#39;].0
+      sage: i = CDF.0
+      sage: f = x^3 + 2*i; f
+      x^3 + 2.0*I
+      sage: f.roots()  # abs tol 1e-14
+      [(-1.0911236359717227 - 0.6299605249474374*I, 1), (3.885780586188048e-16 + 1.2599210498948734*I, 1), (1.0911236359717211 - 0.6299605249474363*I, 1)]
+      sage: f.roots(multiplicities=False)  # abs tol 1e-14
+      [-1.0911236359717227 - 0.6299605249474374*I, 3.885780586188048e-16 + 1.2599210498948734*I, 1.0911236359717211 - 0.6299605249474363*I]
+      sage: [abs(f(z)) for z in f.roots(multiplicities=False)]  # abs tol 1e-14
+      [8.95090418262362e-16, 8.728374398092689e-16, 1.0235750533041806e-15]
+      sage: f = i*x^3 + 2; f
+      I*x^3 + 2.0
+      sage: f.roots()  # abs tol 1e-14
+      [(-1.0911236359717227 + 0.6299605249474374*I, 1), (3.885780586188048e-16 - 1.2599210498948734*I, 1), (1.0911236359717211 + 0.6299605249474363*I, 1)]
+      sage: abs(f(f.roots()[0][0]))  # abs tol 1e-13
+      1.1102230246251565e-16
+
+   Examples using real root isolation:
+
+      sage: x = polygen(ZZ)
+      sage: f = x^2 - x - 1
+      sage: f.roots()
+      []
+      sage: f.roots(ring=RIF)
+      [(-0.6180339887498948482045868343657?, 1), (1.6180339887498948482045868343657?, 1)]
+      sage: f.roots(ring=RIF, multiplicities=False)
+      [-0.6180339887498948482045868343657?, 1.6180339887498948482045868343657?]
+      sage: f.roots(ring=RealIntervalField(150))
+      [(-0.6180339887498948482045868343656381177203091798057628621354486227?, 1), (1.618033988749894848204586834365638117720309179805762862135448623?, 1)]
+      sage: f.roots(ring=AA)
+      [(-0.618033988749895?, 1), (1.618033988749895?, 1)]
+      sage: f = f^2 * (x - 1)
+      sage: f.roots(ring=RIF)
+      [(-0.6180339887498948482045868343657?, 2), (1.0000000000000000000000000000000?, 1), (1.6180339887498948482045868343657?, 2)]
+      sage: f.roots(ring=RIF, multiplicities=False)
+      [-0.6180339887498948482045868343657?, 1.0000000000000000000000000000000?, 1.6180339887498948482045868343657?]
+
+   Examples using complex root isolation:
+
+      sage: x = polygen(ZZ)
+      sage: p = x^5 - x - 1
+      sage: p.roots()
+      []
+      sage: p.roots(ring=CIF)
+      [(1.167303978261419?, 1), (-0.764884433600585? - 0.352471546031727?*I, 1), (-0.764884433600585? + 0.352471546031727?*I, 1), (0.181232444469876? - 1.083954101317711?*I, 1), (0.181232444469876? + 1.083954101317711?*I, 1)]
+      sage: p.roots(ring=ComplexIntervalField(200))
+      [(1.167303978261418684256045899854842180720560371525489039140082?, 1), (-0.76488443360058472602982318770854173032899665194736756700778? - 0.35247154603172624931794709140258105439420648082424733283770?*I, 1), (-0.76488443360058472602982318770854173032899665194736756700778? + 0.35247154603172624931794709140258105439420648082424733283770?*I, 1), (0.18123244446987538390180023778112063996871646618462304743774? - 1.08395410131771066843034449298076657427364024315511565430114?*I, 1), (0.18123244446987538390180023778112063996871646618462304743774? + 1.08395410131771066843034449298076657427364024315511565430114?*I, 1)]
+      sage: rts = p.roots(ring=QQbar); rts
+      [(1.167303978261419?, 1), (-0.7648844336005847? - 0.3524715460317263?*I, 1), (-0.7648844336005847? + 0.3524715460317263?*I, 1), (0.1812324444698754? - 1.083954101317711?*I, 1), (0.1812324444698754? + 1.083954101317711?*I, 1)]
+      sage: p.roots(ring=AA)
+      [(1.167303978261419?, 1)]
+      sage: p = (x - rts[4][0])^2 * (3*x^2 + x + 1)
+      sage: p.roots(ring=QQbar)
+      [(-0.1666666666666667? - 0.552770798392567?*I, 1), (-0.1666666666666667? + 0.552770798392567?*I, 1), (0.1812324444698754? + 1.083954101317711?*I, 2)]
+      sage: p.roots(ring=CIF)
+      [(-0.1666666666666667? - 0.552770798392567?*I, 1), (-0.1666666666666667? + 0.552770798392567?*I, 1), (0.1812324444698754? + 1.083954101317711?*I, 2)]
+
+   Note that coefficients in a number field with defining polynomial
+   x^2 + 1 are considered to be Gaussian rationals (with the generator
+   mapping to +I), if you ask for complex roots.
+
+      sage: K.&lt;im&gt; = QuadraticField(-1)
+      sage: y = polygen(K)
+      sage: p = y^4 - 2 - im
+      sage: p.roots(ring=CC)
+      [(-1.2146389322441... - 0.14142505258239...*I, 1), (-0.14142505258239... + 1.2146389322441...*I, 1), (0.14142505258239... - 1.2146389322441...*I, 1), (1.2146389322441... + 0.14142505258239...*I, 1)]
+      sage: p = p^2 * (y^2 - 2)
+      sage: p.roots(ring=CIF)
+      [(-1.414213562373095?, 1), (1.414213562373095?, 1), (-1.214638932244183? - 0.141425052582394?*I, 2), (-0.141425052582394? + 1.214638932244183?*I, 2), (0.141425052582394? - 1.214638932244183?*I, 2), (1.214638932244183? + 0.141425052582394?*I, 2)]
+
+   Note that one should not use NumPy when wanting high precision
+   output as it does not support any of the high precision types:
+
+      sage: R.&lt;x&gt; = RealField(200)[]
+      sage: f = x^2 - R(pi)
+      sage: f.roots()
+      [(-1.7724538509055160272981674833411451827975494561223871282138, 1), (1.7724538509055160272981674833411451827975494561223871282138, 1)]
+      sage: f.roots(algorithm=&#39;numpy&#39;)
+      doctest... UserWarning: NumPy does not support arbitrary precision arithmetic.  The roots found will likely have less precision than you expect.
+      [(-1.77245385090551..., 1), (1.77245385090551..., 1)]
+
+   We can also find roots over number fields:
+
+      sage: K.&lt;z&gt; = CyclotomicField(15)
+      sage: R.&lt;x&gt; = PolynomialRing(K)
+      sage: (x^2 + x + 1).roots()
+      [(z^5, 1), (-z^5 - 1, 1)]
+
+   There are many combinations of floating-point input and output
+   types that work. (Note that some of them are quite pointless like
+   using &#34;algorithm=&#39;numpy&#39;&#34; with high-precision types.)
+
+      sage: rflds = (RR, RDF, RealField(100))
+      sage: cflds = (CC, CDF, ComplexField(100))
+      sage: def cross(a, b):
+      ....:     return list(cartesian_product_iterator([a, b]))
+      sage: flds = cross(rflds, rflds) + cross(rflds, cflds) + cross(cflds, cflds)
+      sage: for (fld_in, fld_out) in flds:
+      ....:     x = polygen(fld_in)
+      ....:     f = x^3 - fld_in(2)
+      ....:     x2 = polygen(fld_out)
+      ....:     f2 = x2^3 - fld_out(2)
+      ....:     for algo in (None, &#39;pari&#39;, &#39;numpy&#39;):
+      ....:         rts = f.roots(ring=fld_out, multiplicities=False)
+      ....:         if fld_in == fld_out and algo is None:
+      ....:             print(&#34;{} {}&#34;.format(fld_in, rts))
+      ....:         for rt in rts:
+      ....:             assert(abs(f2(rt)) &lt;= 1e-10)
+      ....:             assert(rt.parent() == fld_out)
+      Real Field with 53 bits of precision [1.25992104989487]
+      Real Double Field [1.25992104989...]
+      Real Field with 100 bits of precision [1.2599210498948731647672106073]
+      Complex Field with 53 bits of precision [1.25992104989487, -0.62996052494743... - 1.09112363597172*I, -0.62996052494743... + 1.09112363597172*I]
+      Complex Double Field [1.25992104989..., -0.629960524947... - 1.0911236359717...*I, -0.629960524947... + 1.0911236359717...*I]
+      Complex Field with 100 bits of precision [1.2599210498948731647672106073, -0.62996052494743658238360530364 - 1.0911236359717214035600726142*I, -0.62996052494743658238360530364 + 1.0911236359717214035600726142*I]
+
+   Note that we can find the roots of a polynomial with algebraic
+   coefficients:
+
+      sage: rt2 = sqrt(AA(2))
+      sage: rt3 = sqrt(AA(3))
+      sage: x = polygen(AA)
+      sage: f = (x - rt2) * (x - rt3); f
+          x^2 - 3.146264369941973?*x + 2.449489742783178?
+      sage: rts = f.roots(); rts
+      [(1.414213562373095?, 1), (1.732050807568878?, 1)]
+      sage: rts[0][0] == rt2
+      True
+      sage: f.roots(ring=RealIntervalField(150))
+      [(1.414213562373095048801688724209698078569671875376948073176679738?, 1), (1.732050807568877293527446341505872366942805253810380628055806980?, 1)]
+
+   We can handle polynomials with huge coefficients.
+
+   This number doesn&#39;t even fit in an IEEE double-precision float, but
+   RR and CC allow a much larger range of floating-point numbers:
+
+      sage: bigc = 2^1500
+      sage: CDF(bigc)
+      +infinity
+      sage: CC(bigc)
+      3.50746621104340e451
+
+   Polynomials using such large coefficients can&#39;t be handled by
+   numpy, but pari can deal with them:
+
+      sage: x = polygen(QQ)
+      sage: p = x + bigc
+      sage: p.roots(ring=RR, algorithm=&#39;numpy&#39;)
+      Traceback (most recent call last):
+      ...
+      LinAlgError: Array must not contain infs or NaNs
+      sage: p.roots(ring=RR, algorithm=&#39;pari&#39;)
+      [(-3.50746621104340e451, 1)]
+      sage: p.roots(ring=AA)
+      [(-3.5074662110434039?e451, 1)]
+      sage: p.roots(ring=QQbar)
+      [(-3.5074662110434039?e451, 1)]
+      sage: p = bigc*x + 1
+      sage: p.roots(ring=RR)
+      [(0.000000000000000, 1)]
+      sage: p.roots(ring=AA)
+      [(-2.8510609648967059?e-452, 1)]
+      sage: p.roots(ring=QQbar)
+      [(-2.8510609648967059?e-452, 1)]
+      sage: p = x^2 - bigc
+      sage: p.roots(ring=RR)
+      [(-5.92238652153286e225, 1), (5.92238652153286e225, 1)]
+      sage: p.roots(ring=QQbar)
+      [(-5.9223865215328558?e225, 1), (5.9223865215328558?e225, 1)]
+
+   Algorithms used:
+
+   For brevity, we will use RR to mean any RealField of any precision;
+   similarly for RIF, CC, and CIF. Since Sage has no specific
+   implementation of Gaussian rationals (or of number fields with
+   embedding, at all), when we refer to Gaussian rationals below we
+   will accept any number field with defining polynomial x^2+1,
+   mapping the field generator to +I.
+
+   We call the base ring of the polynomial K, and the ring given by
+   the ring= argument L. (If ring= is not specified, then L is the
+   same as K.)
+
+   If K and L are floating-point (RDF, CDF, RR, or CC), then a
+   floating-point root-finder is used. If L is RDF or CDF then we
+   default to using NumPy&#39;s roots(); otherwise, we use PARI&#39;s
+   polroots(). This choice can be overridden with algorithm=&#39;pari&#39; or
+   algorithm=&#39;numpy&#39;. If the algorithm is unspecified and NumPy&#39;s
+   roots() algorithm fails, then we fall back to pari (numpy will fail
+   if some coefficient is infinite, for instance).
+
+   If L is SR, then the roots will be radical expressions, computed as
+   the solutions of a symbolic polynomial expression. At the moment
+   this delegates to &#34;sage.symbolic.expression.Expression.solve()&#34;
+   which in turn uses Maxima to find radical solutions. Some solutions
+   may be lost in this approach. Once https://trac.sagemath.org/17516
+   gets implemented, all possible radical solutions should become
+   available.
+
+   If L is AA or RIF, and K is ZZ, QQ, or AA, then the root isolation
+   algorithm sage.rings.polynomial.real_roots.real_roots() is used.
+   (You can call real_roots() directly to get more control than this
+   method gives.)
+
+   If L is QQbar or CIF, and K is ZZ, QQ, AA, QQbar, or the Gaussian
+   rationals, then the root isolation algorithm
+   sage.rings.polynomial.complex_roots.complex_roots() is used. (You
+   can call complex_roots() directly to get more control than this
+   method gives.)
+
+   If L is AA and K is QQbar or the Gaussian rationals, then
+   complex_roots() is used (as above) to find roots in QQbar, then
+   these roots are filtered to select only the real roots.
+
+   If L is floating-point and K is not, then we attempt to change the
+   polynomial ring to L (using .change_ring()) (or, if L is complex
+   and K is not, to the corresponding real field). Then we use either
+   PARI or numpy as specified above.
+
+   For all other cases where K is different than L, we just use
+   .change_ring(L) and proceed as below.
+
+   The next method, which is used if K is an integral domain, is to
+   attempt to factor the polynomial. If this succeeds, then for every
+   degree-one factor a*x+b, we add -b/a as a root (as long as this
+   quotient is actually in the desired ring).
+
+   If factoring over K is not implemented (or K is not an integral
+   domain), and K is finite, then we find the roots by enumerating all
+   elements of K and checking whether the polynomial evaluates to zero
+   at that value.
+
+   Note: We mentioned above that polynomials with multiple roots are
+     always ill-conditioned; if your input is given to n bits of
+     precision, you should not expect more than n/k good bits for a
+     k-fold root. (You can get solutions that make the polynomial
+     evaluate to a number very close to zero; basically the problem is
+     that with a multiple root, there are many such numbers, and it&#39;s
+     difficult to choose between them.)To see why this is true,
+     consider the naive floating-point error analysis model where you
+     just pretend that all floating-point numbers are somewhat
+     imprecise - a little &#39;fuzzy&#39;, if you will.  Then the graph of a
+     floating-point polynomial will be a fuzzy line.  Consider the
+     graph of (x-1)^3; this will be a fuzzy line with a horizontal
+     tangent at x=1, y=0. If the fuzziness extends up and down by
+     about j, then it will extend left and right by about
+     cube_root(j).
+<span class="ansi-red-fg">Init docstring:</span> x.__init__(...) initializes x; see help(type(x)) for signature
+<span class="ansi-red-fg">File:</span>           sage/rings/polynomial/polynomial_element.pyx
+<span class="ansi-red-fg">Type:</span>           builtin_function_or_method
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Plus utile pour nous: on prend la liste des racines, sans les multiplicités</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">H</span><span class="o">.</span><span class="n">roots</span><span class="p">(</span><span class="n">RR</span><span class="p">,</span> <span class="n">multiplicities</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[-0.924209668349044, -0.597428986963397, 0.721113386166218, 0.966506296874216]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On évalue $f$ et $g$ en les racines, pour retrouver les valeurs de $Y$ qui correspondent. On conclut que les courbes ont exactement 4 points d'intersection réels.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="p">[(</span><span class="n">r</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">r</span><span class="p">)</span><span class="o">.</span><span class="n">univariate_polynomial</span><span class="p">()</span><span class="o">.</span><span class="n">roots</span><span class="p">(</span><span class="n">RR</span><span class="p">,</span> <span class="n">multiplicities</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+ <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">H</span><span class="o">.</span><span class="n">roots</span><span class="p">(</span><span class="n">RR</span><span class="p">,</span> <span class="n">multiplicities</span><span class="o">=</span><span class="bp">False</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(-0.924209668349044, [-0.721113386166218, 0.721113386166218]),
+ (-0.597428986963397, [-0.966506296874216, 0.966506296874216]),
+ (0.721113386166218, [-0.924209668349044, 0.924209668349044]),
+ (0.966506296874216, [-0.597428986963397, 0.597428986963397])]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="p">[(</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">r</span><span class="p">)</span><span class="o">.</span><span class="n">univariate_polynomial</span><span class="p">()</span><span class="o">.</span><span class="n">roots</span><span class="p">(</span><span class="n">RR</span><span class="p">,</span> <span class="n">multiplicities</span><span class="o">=</span><span class="bp">False</span><span class="p">))</span>
+ <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">H</span><span class="o">.</span><span class="n">roots</span><span class="p">(</span><span class="n">RR</span><span class="p">,</span> <span class="n">multiplicities</span><span class="o">=</span><span class="bp">False</span><span class="p">)]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(-0.924209668349044, [0.721113386166218]),
+ (-0.597428986963397, [0.966506296874216]),
+ (0.721113386166218,
+  [-1.63522612855497, -0.924209668349044, 1.74160318999678]),
+ (0.966506296874216,
+  [-2.04507691212831, -0.597428986963397, 1.88331929776419])]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pour mieux visualiser ces solutions, on les dessine</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span>implicit_plot<span class="o">?</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre><span class="ansi-red-fg">Signature:</span>      implicit_plot<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwds<span class="ansi-blue-fg">)</span>
+<span class="ansi-red-fg">Docstring:</span>     
+   &#34;implicit_plot&#34; takes a function of two variables, f(x, y) and
+   plots the curve f(x,y) = 0 over the specified &#34;xrange&#34; and &#34;yrange&#34;
+   as demonstrated below.
+
+   &#34;implicit_plot(f, (xmin,xmax), (ymin,ymax), ...)&#34;
+
+   &#34;implicit_plot(f, (x,xmin,xmax), (y,ymin,ymax), ...)&#34;
+
+   INPUT:
+
+   * &#34;f&#34; -- a function of two variables or equation in two variables
+
+   * &#34;(xmin,xmax)&#34; -- 2-tuple, the range of &#34;x&#34; values or
+     &#34;(x,xmin,xmax)&#34;
+
+   * &#34;(ymin,ymax)&#34; -- 2-tuple, the range of &#34;y&#34; values or
+     &#34;(y,ymin,ymax)&#34;
+
+   The following inputs must all be passed in as named parameters:
+
+   * &#34;plot_points&#34; -- integer (default: 150); number of points to
+     plot in each direction of the grid
+
+   * &#34;fill&#34; -- boolean (default: &#34;False&#34;); if &#34;True&#34;, fill the
+     region f(x, y) &lt; 0.
+
+   * &#34;fillcolor&#34; -- string (default: &#34;&#39;blue&#39;&#34;), the color of the
+     region where f(x,y) &lt; 0 if &#34;fill = True&#34;. Colors are defined in
+     &#34;sage.plot.colors&#34;; try &#34;colors?&#34; to see them all.
+
+   * &#34;linewidth&#34; -- integer (default: None), if a single integer all
+     levels will be of the width given, otherwise the levels will be
+     plotted with the widths in the order given.
+
+   * &#34;linestyle&#34; -- string (default: None), the style of the line to
+     be plotted, one of: &#34;&#34;solid&#34;&#34;, &#34;&#34;dashed&#34;&#34;, &#34;&#34;dashdot&#34;&#34; or
+     &#34;&#34;dotted&#34;&#34;, respectively &#34;&#34;-&#34;&#34;, &#34;&#34;--&#34;&#34;, &#34;&#34;-.&#34;&#34;, or &#34;&#34;:&#34;&#34;.
+
+   * &#34;color&#34; -- string (default: &#34;&#39;blue&#39;&#34;), the color of the plot.
+     Colors are defined in &#34;sage.plot.colors&#34;; try &#34;colors?&#34; to see
+     them all. If &#34;fill = True&#34;, then this sets only the color of the
+     border of the plot. See &#34;fillcolor&#34; for setting the color of the
+     fill region.
+
+   * &#34;legend_label&#34; -- the label for this item in the legend
+
+   * &#34;base&#34; -- (default: 10) the base of the logarithm if a
+     logarithmic scale is set. This must be greater than 1. The base
+     can be also given as a list or tuple &#34;(basex, basey)&#34;. &#34;basex&#34;
+     sets the base of the logarithm along the horizontal axis and
+     &#34;basey&#34; sets the base along the vertical axis.
+
+   * &#34;scale&#34; -- (default: &#34;&#34;linear&#34;&#34;) string. The scale of the axes.
+     Possible values are &#34;&#34;linear&#34;&#34;, &#34;&#34;loglog&#34;&#34;, &#34;&#34;semilogx&#34;&#34;,
+     &#34;&#34;semilogy&#34;&#34;.
+
+     The scale can be also be given as single argument that is a list
+     or tuple &#34;(scale, base)&#34; or &#34;(scale, basex, basey)&#34;.
+
+     The &#34;&#34;loglog&#34;&#34; scale sets both the horizontal and vertical axes
+     to logarithmic scale. The &#34;&#34;semilogx&#34;&#34; scale sets the horizontal
+     axis to logarithmic scale. The &#34;&#34;semilogy&#34;&#34; scale sets the
+     vertical axis to logarithmic scale. The &#34;&#34;linear&#34;&#34; scale is the
+     default value when &#34;Graphics&#34; is initialized.
+
+   EXAMPLES:
+
+   A simple circle with a radius of 2. Note that since the input
+   function is an expression, we need to explicitly declare the
+   variables in 3-tuples for the range:
+
+      sage: var(&#34;x y&#34;)
+      (x, y)
+      sage: implicit_plot(x^2 + y^2 - 2, (x,-3,3), (y,-3,3))
+      Graphics object consisting of 1 graphics primitive
+
+   We can do the same thing, but using a callable function so we don&#39;t
+   need to explicitly define the variables in the ranges. We also fill
+   the inside:
+
+      sage: f(x,y) = x^2 + y^2 - 2
+      sage: implicit_plot(f, (-3,3), (-3,3), fill=True, plot_points=500) # long time
+      Graphics object consisting of 2 graphics primitives
+
+   The same circle but with a different line width:
+
+      sage: implicit_plot(f, (-3,3), (-3,3), linewidth=6)
+      Graphics object consisting of 1 graphics primitive
+
+   Again the same circle but this time with a dashdot border:
+
+      sage: implicit_plot(f, (-3,3), (-3,3), linestyle=&#39;dashdot&#39;)
+      Graphics object consisting of 1 graphics primitive
+
+   The same circle with different line and fill colors:
+
+      sage: implicit_plot(f, (-3,3), (-3,3), color=&#39;red&#39;, fill=True, fillcolor=&#39;green&#39;,
+      ....:                                  plot_points=500) # long time
+      Graphics object consisting of 2 graphics primitives
+
+   You can also plot an equation:
+
+      sage: var(&#34;x y&#34;)
+      (x, y)
+      sage: implicit_plot(x^2 + y^2 == 2, (x,-3,3), (y,-3,3))
+      Graphics object consisting of 1 graphics primitive
+
+   You can even change the color of the plot:
+
+      sage: implicit_plot(x^2 + y^2 == 2, (x,-3,3), (y,-3,3), color=&#34;red&#34;)
+      Graphics object consisting of 1 graphics primitive
+
+   The color of the fill region can be changed:
+
+      sage: implicit_plot(x**2 + y**2 == 2, (x,-3,3), (y,-3,3), fill=True, fillcolor=&#39;red&#39;)
+      Graphics object consisting of 2 graphics primitives
+
+   Here is a beautiful (and long) example which also tests that all
+   colors work with this:
+
+      sage: G = Graphics()
+      sage: counter = 0
+      sage: for col in colors.keys():  # long time
+      ....:     G += implicit_plot(x^2 + y^2 == 1 + counter*.1, (x,-4,4),(y,-4,4), color=col)
+      ....:     counter += 1
+      sage: G  # long time
+      Graphics object consisting of 148 graphics primitives
+
+   We can define a level-n approximation of the boundary of the
+   Mandelbrot set:
+
+      sage: def mandel(n):
+      ....:     c = polygen(CDF, &#39;c&#39;)
+      ....:     z = 0
+      ....:     for i in range(n):
+      ....:         z = z*z + c
+      ....:     def f(x,y):
+      ....:         val = z(CDF(x, y))
+      ....:         return val.norm() - 4
+      ....:     return f
+
+   The first-level approximation is just a circle:
+
+      sage: implicit_plot(mandel(1), (-3,3), (-3,3))
+      Graphics object consisting of 1 graphics primitive
+
+   A third-level approximation starts to get interesting:
+
+      sage: implicit_plot(mandel(3), (-2,1), (-1.5,1.5))
+      Graphics object consisting of 1 graphics primitive
+
+   The seventh-level approximation is a degree 64 polynomial, and
+   &#34;implicit_plot&#34; does a pretty good job on this part of the curve.
+   (&#34;plot_points=200&#34; looks even better, but it takes over a second.)
+
+      sage: implicit_plot(mandel(7), (-0.3, 0.05), (-1.15, -0.9), plot_points=50)
+      Graphics object consisting of 1 graphics primitive
+
+   When making a filled implicit plot using a python function rather
+   than a symbolic expression the user should increase the number of
+   plot points to avoid artifacts:
+
+      sage: implicit_plot(lambda x, y: x^2 + y^2 - 2, (x,-3,3), (y,-3,3),
+      ....:               fill=True, plot_points=500) # long time
+      Graphics object consisting of 2 graphics primitives
+
+   An example of an implicit plot on &#39;loglog&#39; scale:
+
+      sage: implicit_plot(x^2 + y^2 == 200, (x,1,200), (y,1,200), scale=&#39;loglog&#39;)
+      Graphics object consisting of 1 graphics primitive
+<span class="ansi-red-fg">Init docstring:</span> x.__init__(...) initializes x; see help(type(x)) for signature
+<span class="ansi-red-fg">File:</span>           /usr/lib/python2.7/dist-packages/sage/misc/decorators.py
+<span class="ansi-red-fg">Type:</span>           function
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">implicit_plot</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">implicit_plot</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="n">Y</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_png output_subarea output_execute_result">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exo-10.6">Exo 10.6<a class="anchor-link" href="#Exo-10.6">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">A</span><span class="o">.&lt;</span><span class="n">v</span><span class="p">,</span><span class="n">u</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">PolynomialRing</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;lex&#39;</span><span class="p">)</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">ideal</span><span class="p">(</span><span class="n">v</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="n">u</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> 
+            <span class="n">u</span><span class="o">*</span><span class="n">y</span> <span class="o">-</span> <span class="n">v</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">z</span> <span class="o">-</span> <span class="n">u</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On voit que, puisqu'on n'a pas ajouté d'équation pour interdire aux dénominateurs de s'annuler, l'équation implicite contient un hyperplan $z=0$ qui n'appartient pas à la courbe paramétrée.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()</span>
+<span class="n">G</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[19]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[v^2 - y*z, v*x - z^2, v*z^2 - x*y*z, u - z, x^2*y*z - z^4]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On ajoute donc une équation pour interdire à $u$ et $v$ de s'annuler.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">I</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">ideal</span><span class="p">(</span><span class="n">v</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="n">u</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> 
+            <span class="n">u</span><span class="o">*</span><span class="n">y</span> <span class="o">-</span> <span class="n">v</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">z</span> <span class="o">-</span> <span class="n">u</span><span class="p">,</span>
+            <span class="mi">1</span> <span class="o">-</span> <span class="n">w</span><span class="o">*</span><span class="n">u</span><span class="o">*</span><span class="n">v</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On remarque tout de même que le point $(0,0,0)$ fait partie de la clôture de Zariski, mais pas de la courbe paramétrée. En effet, la valeur $x=y=z=0$ ne peut pas être remontée en une solution pour $u,v,w$.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">G</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[25]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[v - w*y*z^2, u - z, w*x*y - 1, w*z^3 - x, x^2*y - z^3]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">A</span><span class="o">.&lt;</span><span class="n">t</span><span class="p">,</span><span class="n">w</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">PolynomialRing</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;lex&#39;</span><span class="p">)</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">A</span><span class="o">.</span><span class="n">ideal</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="p">(</span><span class="n">t</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">t</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="n">y</span><span class="o">*</span><span class="p">(</span><span class="n">t</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">t</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="mi">1</span> <span class="o">-</span> <span class="n">w</span><span class="o">*</span><span class="p">(</span><span class="n">t</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">I</span><span class="o">.</span><span class="n">elimination_ideal</span><span class="p">([</span><span class="n">t</span><span class="p">,</span><span class="n">w</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Ideal (x^2*y^2 - 2*x^2*y + x^2 + 4*x*y - 4*x + y^2 + 3) of Multivariate Polynomial Ring in t, w, x, y, z over Rational Field</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Ici, par contre, pas de problème pour remonter toute solution $x,y$: la clôture de Zariski coïncide avec la courbe paramétrée</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()</span>
+<span class="n">G</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[28]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[t + 1/2*x^2*y - 1/2*x^2 + x + 1/2*y + 1/2, w + 1/2*y - 1/2, x^2*y^2 - 2*x^2*y + x^2 + 4*x*y - 4*x + y^2 + 3]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exo-10.7">Exo 10.7<a class="anchor-link" href="#Exo-10.7">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">R</span><span class="o">.&lt;</span><span class="n">h</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">A</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">PolynomialRing</span><span class="p">(</span><span class="n">QQ</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s1">&#39;lex&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>On met dans l'idéal des rélations la formule pour le calcul de la surface, ainsi que le théorème de Pitagore.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">I</span> <span class="o">=</span> <span class="n">R</span><span class="o">.</span><span class="n">ideal</span><span class="p">(</span><span class="n">A</span> <span class="o">-</span> <span class="n">c</span><span class="o">*</span><span class="n">h</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">h</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span>
+            <span class="n">b</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">h</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="p">(</span><span class="n">c</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>En éliminant les variables autres que $A,a,b,c$, on trouve une équation qui lie ces quatre variables.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">groebner_basis</span><span class="p">()</span>
+<span class="n">G</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[31]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[h^2 + x^2 - a^2, h*A + 1/4*x*a^2 - 1/4*x*b^2 - 3/8*a^2*c - 1/8*b^2*c + 1/8*c^3, h*a^2 - h*b^2 - 4*x*A + 2*A*c, h*c - 2*A, x*c - 1/2*a^2 + 1/2*b^2 - 1/2*c^2, A^2 + 1/16*a^4 - 1/8*a^2*b^2 - 1/8*a^2*c^2 + 1/16*b^4 - 1/8*b^2*c^2 + 1/16*c^4]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">G</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">f</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[32]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>A^2 + 1/16*a^4 - 1/8*a^2*b^2 - 1/8*a^2*c^2 + 1/16*b^4 - 1/8*b^2*c^2 + 1/16*c^4</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>L'équation est plus lisible si on la factorise</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="p">(</span><span class="n">f</span> <span class="o">-</span> <span class="n">A</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">factor</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[33]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(1/16) * (-a + b - c) * (-a + b + c) * (a + b - c) * (a + b + c)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+ 
+
